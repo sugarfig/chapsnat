@@ -1,6 +1,6 @@
 import firebase from "@firebase/app";
 import React, { useState } from "react";
-import Colors from "../constants/colors";
+import Colors from "../constants/Colors";
 import { Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 
