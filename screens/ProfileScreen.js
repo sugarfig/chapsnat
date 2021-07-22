@@ -14,9 +14,10 @@ import { useActionSheet } from "@expo/react-native-action-sheet";
 import * as ImagePicker from "expo-image-picker";
 
 export default function ProfileScreen() {
-  const { showActionSheetWithOptions } = useActionSheet();
-  const [imageURI, setImageURI] = useState(null);
   var user = firebase.auth().currentUser;
+  const { showActionSheetWithOptions } = useActionSheet();
+  const [imageURI, setImageURI] = useState(user ? user.photoURL : "");
+  
 
   const onPressLogout = async () => {
     await firebase
